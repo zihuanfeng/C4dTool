@@ -76,7 +76,7 @@ public class AboutActivity extends AppCompatActivity {
             String code=json.getString("qrcode_url");
             if (code!=null && !code.isEmpty())
             {
-                Log.i("dxkite-qrcode",code);
+                Log.i("dxkite_qrcode",code);
                 return code;
             }
         } catch (IOException | JSONException e) {

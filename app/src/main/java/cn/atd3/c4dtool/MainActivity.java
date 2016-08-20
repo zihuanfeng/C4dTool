@@ -339,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
         new Thread(new Runnable(){
             @Override
             public void run() {
-                String url="http://test.atd3.org/c4tool/check_info";
+                String url="http://file.atd3.cn/c4dtool/check_info";
                 JSONObject obj=new JSONObject();
                 FileOutputStream outputStream;
                 Message msg=handler.obtainMessage();
@@ -348,7 +348,8 @@ public class MainActivity extends AppCompatActivity {
                     obj.put("MobileInfo",getMobileInfo());
                     obj.put("CPUInfo",getCpuString());
                     JSONObject get=new JSONObject(post_json(url,obj.toString()));
-                    Log.i("dxkite_getJson",get.toString());
+                    Log.i("dxkite_send",obj.toString());
+                    Log.i("dxkite_get",get.toString());
                     outputStream = openFileOutput(getString(R.string.url_info), Context.MODE_PRIVATE);
                     outputStream.write(get.toString().getBytes());
                     outputStream.close();
