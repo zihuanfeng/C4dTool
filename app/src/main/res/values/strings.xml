@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">C4droid辅助工具</string>
+    <string name="refresh">检查C4droid的更新</string>
+    <string name="system_info_format">"你当前的系统版本为%1$d，推荐你下载%1$d位的C4droid"</string>
+    <string name="system_check">"检测到C4droid已经安装完成，请卸载后再安装新的版本"</string>
+    <string name="system_x86">C4droid无x86版本的GCC编译器，安装后可能会无法运行</string>
+    <string name="no_install">"你要卸载的应用未安装未安装"</string>
+    <string name="system_info">请点击检测适应版本来检测系统信息</string>
+    <string name="c4droid">C4droid</string>
+    <string name="c432_en">32位版</string>
+    <string name="c432_zh">32位汉化版</string>
+    <string name="c464_en">64位版</string>
+    <string name="c464_zh">64位汉化版</string>
+    <string name="c4_select">请选择要下载的版本</string>
+    <string name="check_info">检测适应版本</string>
+    <string name="uninstall_c4">卸载C4droid</string>
+    <string name="uninstall_gcc">卸载GCC插件</string>
+    <string name="uninstall_sdl">卸载SDL插件</string>
+    <string name="get_codebook">下载代码手册</string>
+    <string name="get_CIDE">下载CIDE</string>
+    <string name="about">关于</string>
+    <string name="checking">检查系统中。。。</string>
+    <string name="refresh_url">向服务器请求更新信息中</string>
+    <string name="refresh_ok">获取下载信息成功~</string>
+    <string name="refresh_error">获取下载信息失败！</string>
+    <string name="about_author_info">ATD工作室倾情制作</string>
+    <string name="about_project_info">项目地址：\t\thttps://www.github.com/ATDStudio/C4dTool\n开源协议：\t\tMIT\n当前版本：\t\t1.0\n官网：\t\thttp://www.atd3.cn</string>
+    <string name="about_donate">友情捐赠</string>
+    <string name="about_donate_info">ATD工作室是一个自费运营的工作室，为了世界的和平清净，不投放广告，如果你觉得ATD工作室对你有所帮助，可以资助我们。</string>
+    <string name="about_alpay">支付宝账号：DXkite</string>
+</resources>

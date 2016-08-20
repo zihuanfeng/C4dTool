@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cn.atd3.c4dtool.MainActivity">
+    <item
+        android:id="@+id/action_refresh"
+        android:orderInCategory="100"
+        android:title="@string/refresh"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_uninstall_c4"
+        android:orderInCategory="100"
+        android:title="@string/uninstall_c4"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_uninstall_gcc"
+        android:orderInCategory="100"
+        android:title="@string/uninstall_gcc"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_uninstall_sdl"
+        android:orderInCategory="100"
+        android:title="@string/uninstall_sdl"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_get_book"
+        android:orderInCategory="100"
+        android:title="@string/get_codebook"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_getCIDE"
+        android:orderInCategory="100"
+        android:title="@string/get_CIDE"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="100"
+        android:title="@string/about"
+        app:showAsAction="never" />
+</menu>
