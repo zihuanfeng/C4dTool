@@ -251,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
         JSONObject obj=null;
         // 读取的信息
         try {
-            read=readFile("Url_info");
+            read=readFile(getString(R.string.url_info));
             obj = new JSONObject(read);
         } catch (Exception e) {
             e.printStackTrace();
@@ -349,7 +349,7 @@ public class MainActivity extends AppCompatActivity {
                     obj.put("CPUInfo",getCpuString());
                     JSONObject get=new JSONObject(post_json(url,obj.toString()));
                     Log.i("dxkite_getJson",get.toString());
-                    outputStream = openFileOutput("Url_info", Context.MODE_PRIVATE);
+                    outputStream = openFileOutput(getString(R.string.url_info), Context.MODE_PRIVATE);
                     outputStream.write(get.toString().getBytes());
                     outputStream.close();
                     msg.arg1=0;

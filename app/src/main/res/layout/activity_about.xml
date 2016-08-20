@@ -61,14 +61,15 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="20dp" />
 
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/about_alpay"
                 android:id="@+id/alpay"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp" />
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/qricon"
+                android:paddingBottom="30dp" />
+
         </LinearLayout>
     </ScrollView>
 

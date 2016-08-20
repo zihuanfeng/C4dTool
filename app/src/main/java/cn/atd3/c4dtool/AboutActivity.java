@@ -5,9 +5,18 @@ import android.net.Uri;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class AboutActivity extends AppCompatActivity {
     // OK url-1
@@ -24,16 +33,15 @@ public class AboutActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle("关于我们");
         }
-        TextView get=(TextView)findViewById(R.id.alpay);
+        View get= findViewById(R.id.alpay);
         if (get != null) {
             get.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent= new Intent();
                     intent.setAction("android.intent.action.VIEW");
-                    Uri content_url = Uri.parse(pay_url);
+                    Uri content_url = Uri.parse(getQrUrl());
                     intent.setData(content_url);
                     intent.setClassName("com.eg.android.AlipayGphone","com.alipay.mobile.quinox.LauncherActivity");
                     startActivity(intent);
@@ -50,5 +58,30 @@ public class AboutActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public String getQrUrl()  {
+
+        FileInputStream fis = null;
+        try {
+            fis = getApplicationContext().openFileInput(getString(R.string.url_info));
+            ByteArrayOutputStream json_code = new ByteArrayOutputStream();
+            byte[] buf = new byte[1024];
+            int len = 0;
+            while ((len = fis.read(buf)) != -1) {
+                json_code.write(buf, 0, len);
+            }
+            fis.close();
+            json_code.close();
+            JSONObject json=new JSONObject(json_code.toString());
+            String code=json.getString("qrcode_url");
+            if (code!=null && !code.isEmpty())
+            {
+                Log.i("dxkite-qrcode",code);
+                return code;
+            }
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
+        }
+        return  pay_url;
     }
 }

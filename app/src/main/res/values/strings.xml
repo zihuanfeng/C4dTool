@@ -27,5 +27,7 @@
     <string name="about_project_info">项目地址：\t\thttps://www.github.com/ATDStudio/C4dTool\n开源协议：\t\tMIT\n当前版本：\t\t1.0\n官网：\t\thttp://www.atd3.cn</string>
     <string name="about_donate">友情捐赠</string>
     <string name="about_donate_info">ATD工作室是一个自费运营的工作室，为了世界的和平清净，不投放广告，如果你觉得ATD工作室对你有所帮助，可以资助我们。</string>
-    <string name="about_alpay">支付宝账号：DXkite</string>
+    <string name="url_info">"Url_info"</string>
+    <string name="about_us">关于我们</string>
+    <string name="app_name_short">C4dTool</string>
 </resources>
